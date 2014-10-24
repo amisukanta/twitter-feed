@@ -1,0 +1,7 @@
+<h1>Feeds#index</h1>
+
+<% @tweets.each do |tweet| %>
+  <%= tweet.user.screen_name %><%= tweet.text %></br>
+  
+<% end %>
+<%#= @tweets %>
