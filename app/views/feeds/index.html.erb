@@ -1,9 +1,14 @@
-<h1>Feeds#index</h1>
-<%# @crons.each do |c| %>
-<%= @crons %>
-<%# end %>
-<% @tweets.each do |tweet| %>
-  <%= tweet.screen_name %><%= tweet.content %></br>
-  
-<% end %>
+<h1>Tweet Feeds </h1>
+<div class="row">
+  <%= will_paginate %>
+	<% @feeds.each do |feed| %>
+    <div class="col-xs-12 col-md-8">
+	  @<%= feed.screen_name %> 
+	  <span> | <small> Feed time: <i> <%= feed.created_at %></i></small></span>
+	  <%= simple_format(feed.content) %>
+	  
+	  </div>
+	<% end %>
+	<%= will_paginate %>
+</div>
 <%#= @tweets %>

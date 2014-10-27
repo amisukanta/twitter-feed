@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Schedule:</strong>
+ 
+  <%= am_pm(@schedule.cron) %>   
+</p>
+
+<%= link_to 'Back', schedules_path %>
