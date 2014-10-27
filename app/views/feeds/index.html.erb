@@ -1,7 +1,9 @@
 <h1>Feeds#index</h1>
-
+<%# @crons.each do |c| %>
+<%= @crons %>
+<%# end %>
 <% @tweets.each do |tweet| %>
-  <%= tweet.user.screen_name %><%= tweet.text %></br>
+  <%= tweet.screen_name %><%= tweet.content %></br>
   
 <% end %>
 <%#= @tweets %>
