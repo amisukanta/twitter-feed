@@ -1,8 +1,5 @@
 class Feed < ActiveRecord::Base
 
-	def self.latest
-    order('created_at desc').take(500)
-  end
 
 	def self.pull_tweets
     $client.search("#ukraine", since_id: maximum(:tweet_id), count: 500, :result_type => "recent").take(500).each do |tweet|
