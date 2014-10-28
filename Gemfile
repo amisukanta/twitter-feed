@@ -17,7 +17,7 @@ gem 'will_paginate',  '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
 
-
+ gem 'pg', '0.17.1'
 # gem twitter to fetch tweet stream
 gem 'twitter'
 
@@ -26,14 +26,12 @@ gem 'rufus-scheduler'
 
 
 group :development, :test do
-  #gem 'sqlite3'
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
 end
 group :production do
-  gem 'pg',             '0.17.1'
-  gem 'rails_12factor', '0.0.2'
+ gem 'rails_12factor', '0.0.2'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
