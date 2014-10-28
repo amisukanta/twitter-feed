@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Schedule.destroy_all
+story = Schedule.create!(cron: 13)
+poem = Schedule.create!(cron: 16)
+scifi = Schedule.create!(cron: 0)
+
+
+p "created #{Schedule.count} crons"
