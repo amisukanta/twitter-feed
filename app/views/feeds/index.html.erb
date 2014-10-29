@@ -1,6 +1,7 @@
 <h1>Tweet Feeds </h1>
-<div class="row">
   <%= will_paginate %>
+<div class="row">
+
 	<% @feeds.each do |feed| %>
     <div class="col-xs-12 col-md-8">
 	  @<%= feed.screen_name %> 
@@ -9,6 +10,7 @@
 	  
 	  </div>
 	<% end %>
-	<%= will_paginate %>
+
 </div>
+	<%= will_paginate %>
 <%#= @tweets %>
